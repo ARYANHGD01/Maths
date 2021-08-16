@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="style.css" type="text/css"/>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+ <title></title>
+ <style>
+ 
+ </style>
+</head>
+<body data-rsssl=1 bgcolor="#FF0000">
+<div class="container-fluid bbg"
+ <div class="main-container container">
+ 
+  <div class="head">
+  <h1 class="main-heading">Age calculator</h1>
+  </div>
+  <div class="sub-container">
+  <div class="inner">
+  <div class="dateofbirth">
+  <span id="dob" >Date of Birth </span>
+  <input type="date" id="dateStart"/></br>
+  </div>
+  <div class="todaydate">
+  <span id="db">Age at the Date</span>
+  <input type="date" id="dateEnd"/>
+  </div>
+  
+  <input type="button" id="btn" value="Calculate Age" />
+  </div>
+  </div>
+ <div class="container-fluid second">
+  <div class="row">
+    <div class="col-md">
+ <div class="contain" id="year">
+  <h1 class="heading1" id="showYears">0</h1>
+  <h3 class="heading2">Years</h3>
+ </div>
+ </div>
+    <div class="col-md">
+ <div class="contain" id="month">
+  <h1 class="heading1" id="showMonths">0</h1>
+  <h3 class="heading2">Months</h3>
+ </div>
+ </div>
+    <div class="col-md">
+ <div class="contain" id="days">
+  <h1 class="heading1" id="showDays">0</h1>
+  <h3 class="heading2">Days</h3>
+ </div>
+ </div>
+  </div>
+   
+</div>
+</div>
+ </div>
+
+</div>
+ 
+ <script>
+     var showYears=document.getElementById('showYears');
+  var showMonths=document.getElementById('showMonths');
+  var showDays=document.getElementById('showDays');
+  var button=document.getElementById('btn');
+  btn.onclick=function(){
+  var dateStart=document.getElementById('dateStart').value;
+  var dateEnd=document.getElementById('dateEnd').value;
+     var dateStarting=new Date(dateStart);
+  var dateEnding=new Date(dateEnd);
+  var diff=dateEnding-dateStarting;
+  var years=Math.floor(diff/(365.25*24*60*60*1000));
+  var remaining=Math.floor(diff%(365.25*24*60*60*1000));
+  var months=Math.floor(remaining/((365.25/12)*24*60*60*1000));
+
+ 
+  var remaining=Math.floor(remaining%((365.25/12)*24*60*60*1000));
+  var days=Math.floor(remaining/(24*60*60*1000));
+  showYears.innerHTML=years;
+  showMonths.innerHTML=months;
+  showDays.innerHTML=days;
+  
+  
+  
+  }
+ </script>
+ <style>
+         body {
+            background-image: url('file:///C:/Users/ARYANHGD01/Documents/project/AgeCalculator/agecalculator.jpg');
+            background-repeat: no-repeat;
+/*            background-attachment: fixed;
+*/            background-size: cover;
+         }
+  </style>
+</body>
+</html>
+
+
+
