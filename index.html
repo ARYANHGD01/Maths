@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Main Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="styles.css" type="text/css" />
+      <script> 
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+      </script> 
+      <script>
+         $('.button').click(function(){
+            if ($(this).hasClass('active')) {
+               $(this).removeClass('active')
+            } else {
+               $(this).addClass('active')
+            }
+         });
+      </script>
+      <style> 
+         .title{ 
+            margin-bottom: 10px; 
+            text-align:center; 
+            width: 210px; 
+            color:blue; 
+            border: blue 2px; 
+            font-size: 50px;
+            padding: 25px 15px;
+            text-shadow: 2px 2px red;
+         } 
+         input[type="button"] 
+         { 
+            background-color:red; 
+            color: yellow; 
+/*            border: blue 2px; 
+*/          width:100px; 
+            height: 100px;
+         } 
+         input[type="text"] 
+         { 
+            background-color:yellow; 
+            border: solid black 2px; 
+            width:300px;
+            height: 100px;
+            font-size: 36px;
+         } 
+      </style>
+      <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+
+        table.center {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+</style> 
+</head>
+<body>
+<h1>Please select what you want to perform</h1>
+<hr />
+<ul id="navmenu">
+<!--   <li><a href="file:///C:/Users/Aryan%20Hegde/Documents/calculator.html">Simple Calculator</a></li>
+ -->  <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Multiplication/tables.html">Multiplication Tables</a></li>
+  <li><a href="Factorial/factorial.html">Factorial</a></li>
+  <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/ScientificCalc/Scientific%20Calculator.html">Scientific Calculator</a></li>
+  <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Shapes/Shapes2.html">Shape +</a>
+    <ul>
+      <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Shapes/circle.html">Circle</a>
+          <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Shapes/rect.html">Square</a></li>
+    </ul>
+  </li>
+<!--   <li><a href="file:///C:/Users/Aryan%20Hegde/Documents/graph.html">Graph</a></li>ask if trignometric graph is required too? -->
+  <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/AgeCalculator/agecalculator.html">Age Calculator</a></li>
+  <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/TrignoGraph/graph2.html#sin(x+t)">Trignometric Graphs</a></li>
+  <li><a href="file:///C:/Users/Aryan%20Hegde/Documents/topics">Topics To Learn +</a>
+    <ul>
+      <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Topics/trigonometry.html">Trignometry</a></li>
+      <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Topics/pythagoras.html">Pythagoras' Theorem</a></li>
+      <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Topics/stline.html">Equation of a Straight Line</a></li>
+    </ul></li>
+    <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Game/snake.html">Game</a></li>
+    <li><a href="file:///C:/Users/ARYANHGD01/Documents/project/Feedback/index.html">FeedBack</a></li>
+</ul>
+<center>   <div class = title >Simple Calculator</style></div> 
+</center>
+   <body> 
+      <table class="center" border="2" > 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+            <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" name="1" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" value="/" onclick="dis('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" value="-" onclick="dis('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" value="+" onclick="dis('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" value="0" onclick="dis('0')"/> </td> 
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="dis('*')"/> </td> 
+         </tr> 
+      </table> 
+      <style>
+         body {
+            background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+         }
+      </style>
+   </body> 
+</html>
+</body>
+</html>
